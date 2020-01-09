@@ -6,6 +6,7 @@ dependencies { configuration ->
     qualityAssuranceDependencies(libraries, configuration) /* Quality Assurance */
     kotlinDependencies(libraries, configuration)           /* Kotlin */
     jetpackDependencies(libraries, configuration)          /* Android Jetpack */
+    injectionDependencies(libraries, configuration)        /* Dagger2 */
 
     // add more dependency groups here
 }
@@ -47,4 +48,16 @@ private static void jetpackDependencies(libraries, configuration) {
     configuration.kapt libraries.androidJetpack.lifecycleCompiler
 
     // add more Android Jetpack dependencies here if necessary
+}
+
+/** Dependency Injection Dependencies Group. */
+private static void injectionDependencies(libraries, configuration) {
+    configuration.implementation libraries.dagger.androidSupport
+    configuration.implementation libraries.dagger.android
+    configuration.implementation libraries.dagger.base
+
+    configuration.kapt libraries.dagger.compiler
+    configuration.kapt libraries.dagger.androidProcessor
+
+    // add more dependencies here
 }

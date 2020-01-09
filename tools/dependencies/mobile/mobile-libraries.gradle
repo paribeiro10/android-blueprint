@@ -63,7 +63,23 @@ ext.libraries = [
     ],
 
     /* Dependency Injection Frameworks */
-    // TODO PR: Add Dependency Injection dependency library declarations here
+    dagger : [
+        androidSupport
+            : "com.google.dagger:dagger-android-support:" \
+                 + "$versions.daggerVersion",
+        compiler
+            : "com.google.dagger:dagger-compiler:" \
+                 + "$versions.daggerVersion",
+        androidProcessor
+            : "com.google.dagger:dagger-android-processor:" \
+                 + "$versions.daggerVersion",
+        android
+            : "com.google.dagger:dagger-android:" \
+                 + "$versions.daggerVersion",
+        base
+            : "com.google.dagger:dagger:" \
+                + "$versions.daggerVersion"
+    ],
 
     /* Networking Frameworks */
     // TODO PR: Add Networking dependency library declarations here

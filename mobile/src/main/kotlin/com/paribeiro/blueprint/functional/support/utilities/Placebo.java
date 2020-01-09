@@ -1,4 +1,4 @@
-package com.paribeiro.blueprint.functional.support;
+package com.paribeiro.blueprint.functional.support.utilities;
 
 @Deprecated
 public class Placebo {
