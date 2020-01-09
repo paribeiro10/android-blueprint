@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 apply from: "$project.rootDir/tools/settings/development/git-version.gradle"
 apply from: "$project.rootDir/tools/dependencies/mobile/mobile-versions.gradle"
 apply from: "$project.rootDir/tools/settings/signing/signing-settings.gradle"
-apply from: "$project.rootDir/tools/settings/build/build-settings.gradle"
+apply from: "$project.rootDir/tools/settings/configuration/build-settings.gradle"
 apply from: "$project.rootDir/tools/settings/resource/resource-settings.gradle"
 
 apply plugin: 'kotlin-android'
@@ -25,5 +25,5 @@ android {
 }
 
 apply from: "$project.rootDir/tools/settings/development/development-settings.gradle"
-apply from: "$project.rootDir/tools/settings/build/flavor-settings.gradle"
+apply from: "$project.rootDir/tools/settings/configuration/flavor-settings.gradle"
 apply from: "$project.rootDir/tools/dependencies/mobile/mobile-dependencies.gradle"

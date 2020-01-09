@@ -86,7 +86,6 @@ gen-external-apklibs
 /*/build/
 /*/local.properties
 /*/out
-/*/*/build
 /*/*/production
 *.ipr
 *~
