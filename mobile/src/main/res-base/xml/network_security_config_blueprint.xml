@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+<!--    <domain-config-->
+<!--            cleartextTrafficPermitted="true">-->
+
+<!--        <domain includeSubdomains="true">A DOMAIN IP OR DNS NAME HERE</domain>-->
+
+<!--    </domain-config>-->
+
+    <!-- Add more Domains here if necessary -->
+
+</network-security-config>

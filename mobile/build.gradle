@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+apply from: "$project.rootDir/tools/settings/development/git-version.gradle"
+apply from: "$project.rootDir/tools/dependencies/mobile/mobile-versions.gradle"
+apply from: "$project.rootDir/tools/settings/signing/signing-settings.gradle"
+apply from: "$project.rootDir/tools/settings/build/build-settings.gradle"
+apply from: "$project.rootDir/tools/settings/resource/resource-settings.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        applicationId versions.applicationId
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        testInstrumentationRunner versions.testInstrumentationRunner
+    }
+
+}
+
+apply from: "$project.rootDir/tools/settings/development/development-settings.gradle"
+apply from: "$project.rootDir/tools/settings/build/flavor-settings.gradle"
+apply from: "$project.rootDir/tools/dependencies/mobile/mobile-dependencies.gradle"

@@ -1,0 +1,76 @@
+ext.libraries = [
+
+    /* QA */
+    qualityAssurance : [
+        espressoCore   : "androidx.test.espresso:espresso-core:$versions.espressoCoreVersion",
+        espressoRunner : "androidx.test:runner:$versions.espressoRunnerVersion",
+        jUnit          : "junit:junit:$versions.jUnitVersion",
+        jUnitAndroidX  : "androidx.test.ext:junit:$versions.jUnitAndroidXVersion"
+    ],
+
+    /* Kotlin Frameworks */
+    kotlin : [
+        base : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
+    ],
+
+    /* Android Jetpack Frameworks */
+    androidJetpack : [
+        gridLayout
+            : "androidx.gridlayout:gridlayout:" \
+                + "$versions.jetpackGridlayoutVersion",
+        constraintLayout
+            : "androidx.constraintlayout:constraintlayout:" \
+                + "$versions.jetpackConstraintlayoutVersion",
+        multidex
+            : "androidx.multidex:multidex:" \
+                + "$versions.jetpackMultidexVersion",
+        paging
+            : "androidx.paging:paging-runtime:" \
+                + "$versions.jetpackPagingVersion",
+        recyclerViewSelection
+            : "androidx.recyclerview:recyclerview-selection:" \
+                + "$versions.jetpackRecyclerviewSelectionVersion",
+        lifecycle
+            : "androidx.lifecycle:lifecycle-extensions:" \
+                + "$versions.jetpackLifecycleVersion",
+        lifecycleCompiler
+            : "androidx.lifecycle:lifecycle-compiler:" \
+                + "$versions.jetpackLifecycleVersion",
+        liveData
+            : "androidx.lifecycle:lifecycle-livedata:" \
+                + "$versions.jetpackLifecycleVersion",
+        viewModel
+            : "androidx.lifecycle:lifecycle-viewmodel:" \
+                + "$versions.jetpackLifecycleVersion",
+        viewModelKotlin
+            : "androidx.lifecycle:lifecycle-viewmodel-ktx:" \
+                + "$versions.jetpackLifecycleVersion",
+        lifecycleRuntime
+            : "androidx.lifecycle:lifecycle-runtime:" \
+                + "$versions.jetpackLifecycleVersion",
+        cardView
+            : "androidx.cardview:cardview:" \
+                + "$versions.jetpackCardviewVersion",
+        design
+            : "com.google.android.material:material:" \
+                + "$versions.jetpackDesignVersion",
+        recyclerView
+            : "androidx.recyclerview:recyclerview:" \
+                + "$versions.jetpackRecyclerviewVersion",
+        base
+            : "androidx.appcompat:appcompat:" \
+                + "$versions.jetpackVersion"
+    ],
+
+    /* Dependency Injection Frameworks */
+    // TODO PR: Add Dependency Injection dependency library declarations here
+
+    /* Networking Frameworks */
+    // TODO PR: Add Networking dependency library declarations here
+
+    /* User Interface Frameworks */
+    // TODO PR: Add UI dependency library declarations here
+
+    // Add more base dependency library declarations here if necessary
+
+]

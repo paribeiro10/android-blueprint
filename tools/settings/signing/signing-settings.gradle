@@ -1,0 +1,57 @@
+def final keystorePropertiesFile =
+        file('../tools/settings/signing/keystore.properties') // pay attention to the path
+def final invalidKeystorePropertiesExceptionMessage =
+        'You should define KEYSTORE, KEY and KEYALIAS in ' \
+        + keystorePropertiesFile \
+        + ' file.\nExample:\nKEYALIAS=DesiredValue\nKEY=DesiredValue\nKEYSTORE=DesiredValue'
+
+def keyAliasValue    = ''
+def keyPasswordValue = ''
+def storeFileValue   = ''
+
+android {
+
+    Properties keystoreProperties = new Properties()
+
+    if (keystorePropertiesFile.canRead()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+        if (keystoreProperties != null
+                && keystoreProperties.containsKey('KEYALIAS')
+                && keystoreProperties.containsKey('KEY')
+                && keystoreProperties.containsKey('KEYSTORE')) {
+
+            keyAliasValue    = keystoreProperties.getProperty('KEYALIAS')
+            keyPasswordValue = keystoreProperties.getProperty('KEY')
+            storeFileValue   = keystoreProperties.getProperty('KEYSTORE')
+
+        } else {
+            throw new InvalidKeystorePropertiesException(invalidKeystorePropertiesExceptionMessage)
+        }
+
+    }
+
+    signingConfigs {
+
+        blueprint {
+
+            keyAlias      keyAliasValue
+            keyPassword   keyPasswordValue
+            storeFile     file("$storeFileValue")
+            storePassword keyPasswordValue
+
+        }
+
+        // Add further signing configurations here ...
+
+    }
+
+}
+
+class InvalidKeystorePropertiesException extends RuntimeException {
+
+    InvalidKeystorePropertiesException(String message) {
+        super(message)
+    }
+
+}

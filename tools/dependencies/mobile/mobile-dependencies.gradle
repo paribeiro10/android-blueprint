@@ -1,0 +1,50 @@
+apply from: "$project.rootDir/tools/dependencies/mobile/mobile-libraries.gradle"
+
+dependencies { configuration ->
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    qualityAssuranceDependencies(libraries, configuration) /* Quality Assurance */
+    kotlinDependencies(libraries, configuration)           /* Kotlin */
+    jetpackDependencies(libraries, configuration)          /* Android Jetpack */
+
+    // add more dependency groups here
+}
+
+/** QA Dependencies Group. */
+private static void qualityAssuranceDependencies(libraries, configuration) {
+    configuration.androidTestImplementation(libraries.qualityAssurance.espressoCore, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    configuration.androidTestImplementation libraries.qualityAssurance.espressoRunner
+    configuration.androidTestImplementation libraries.qualityAssurance.jUnitAndroidX
+    configuration.testImplementation        libraries.qualityAssurance.jUnit
+    // add more QA dependencies here if necessary
+}
+
+/** Kotlin Dependencies Group. */
+private static void kotlinDependencies(libraries, configuration) {
+    configuration.implementation libraries.kotlin.base
+    // add more Kotlin dependencies here if necessary
+}
+
+/** Android Jetpack Dependencies Group. */
+private static void jetpackDependencies(libraries, configuration) {
+    configuration.implementation libraries.androidJetpack.gridLayout
+    configuration.implementation libraries.androidJetpack.constraintLayout
+    configuration.implementation libraries.androidJetpack.lifecycleRuntime
+    configuration.implementation libraries.androidJetpack.multidex
+    configuration.implementation libraries.androidJetpack.viewModelKotlin
+    configuration.implementation libraries.androidJetpack.paging
+    configuration.implementation libraries.androidJetpack.recyclerViewSelection
+    configuration.implementation libraries.androidJetpack.lifecycle
+    configuration.implementation libraries.androidJetpack.liveData
+    configuration.implementation libraries.androidJetpack.cardView
+    configuration.implementation libraries.androidJetpack.design
+    configuration.implementation libraries.androidJetpack.recyclerView
+    configuration.implementation libraries.androidJetpack.viewModel
+    configuration.implementation libraries.androidJetpack.base
+
+    configuration.kapt libraries.androidJetpack.lifecycleCompiler
+
+    // add more Android Jetpack dependencies here if necessary
+}
