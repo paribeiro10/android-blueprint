@@ -1,0 +1,38 @@
+apply from: "$project.rootDir/tools/settings/configuration/variant-settings.gradle"
+
+android {
+
+    flavorDimensions 'build'
+
+    productFlavors {
+
+        mobile {
+
+            dimension 'build'
+
+            extension.appName "Android Blueprint"
+            extension.setEndpoints([
+                    dev: "-",
+                    qa: "-",
+                    prod: "-"
+                    // Add more endpoints here if necessary ...
+            ])
+
+            extension.setExtraBuildVars([
+                    dev: [
+                            PREFERENCES: "pt.paribeiro.blueprint.dev"
+                    ],
+                    qa: [
+                            PREFERENCES: "pt.paribeiro.blueprint.qa"
+                    ],
+                    prod: [
+                            PREFERENCES: "pt.paribeiro.blueprint"
+                    ]
+                    // Add more parameters here if necessary ...
+            ])
+
+        }
+
+    }
+
+}
