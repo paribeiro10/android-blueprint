@@ -1,0 +1,5 @@
+ext.libraries = [
+
+    // Add more Commons dependency library declarations here if necessary
+
+]

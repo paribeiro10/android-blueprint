@@ -1,0 +1,15 @@
+ext.versions = [
+
+    /* Android Module Configuration */
+    compileSdk: 29,
+    targetSdk: 29,
+    minSdk: 19,
+    buildTools: '29.0.2',
+    testInstrumentationRunner: 'androidx.test.runner.AndroidJUnitRunner',
+
+    /* Module Build Properties */
+    versionCode: 1,
+    versionName: '1.0.0',
+
+
+]

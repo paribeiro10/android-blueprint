@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+apply from: "$project.rootDir/tools/dependencies/commons/commons-versions.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        testInstrumentationRunner versions.testInstrumentationRunner
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        consumerProguardFiles "$project.rootDir/tools/obfuscation/commons/proguard-consumer-rules.pro"
+    }
+
+    buildTypes {
+
+        // TODO PR: Can / Should we obfuscate the module?
+        release {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            consumerProguardFiles "$project.rootDir/tools/obfuscation/" \
+                                    + "commons/proguard-consumer-rules.pro"
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            consumerProguardFiles "$project.rootDir/tools/obfuscation/" \
+                                    + "commons/proguard-consumer-rules-debug.pro"
+        }
+
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = [ 'src/main/kotlin' ]
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}
+
+apply from: "$project.rootDir/tools/settings/development/development-settings.gradle"
+apply from: "$project.rootDir/tools/dependencies/commons/commons-dependencies.gradle"
