@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
-apply from: "$project.rootDir/tools/settings/development/git-version.gradle"
+apply from: "$project.rootDir/tools/settings/shared/development/git-version.gradle"
 apply from: "$project.rootDir/tools/dependencies/mobile/mobile-versions.gradle"
-apply from: "$project.rootDir/tools/settings/signing/signing-settings.gradle"
-apply from: "$project.rootDir/tools/settings/configuration/build-settings.gradle"
-apply from: "$project.rootDir/tools/settings/resource/resource-settings.gradle"
+apply from: "$project.rootDir/tools/settings/shared/signing/signing-settings.gradle"
+apply from: "$project.rootDir/tools/settings/mobile/configuration/build-settings.gradle"
+apply from: "$project.rootDir/tools/settings/mobile/resource/resource-settings.gradle"
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
@@ -16,14 +16,15 @@ android {
     buildToolsVersion versions.buildTools
 
     defaultConfig {
-        applicationId versions.applicationId
-        minSdkVersion versions.minSdk
-        targetSdkVersion versions.targetSdk
+        applicationId             versions.applicationId
+        minSdkVersion             versions.minSdk
+        targetSdkVersion          versions.targetSdk
         testInstrumentationRunner versions.testInstrumentationRunner
+        multiDexEnabled           true
     }
 
 }
 
-apply from: "$project.rootDir/tools/settings/development/development-settings.gradle"
-apply from: "$project.rootDir/tools/settings/configuration/flavor-settings.gradle"
+apply from: "$project.rootDir/tools/settings/shared/development/development-settings.gradle"
+apply from: "$project.rootDir/tools/settings/mobile/configuration/flavor-settings.gradle"
 apply from: "$project.rootDir/tools/dependencies/mobile/mobile-dependencies.gradle"

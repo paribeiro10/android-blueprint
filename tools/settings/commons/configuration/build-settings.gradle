@@ -1,0 +1,53 @@
+android {
+
+    buildTypes {
+
+        // TODO PR: Can / Should we obfuscate the module?
+        prod {
+
+            initWith              release
+            debuggable            false
+            minifyEnabled         true
+            zipAlignEnabled       true
+            consumerProguardFiles "$project.rootDir/tools/obfuscation/" \
+                                    + "commons/proguard-consumer-rules.pro"
+            // Add further PROD configurations here
+
+        }
+
+        qa {
+            initWith              debug
+            debuggable            true
+            minifyEnabled         true
+            zipAlignEnabled       true
+            consumerProguardFiles "$project.rootDir/tools/obfuscation/" \
+                                    + "commons/proguard-consumer-rules.pro"
+
+            // Add further QA configurations here
+
+        }
+
+        dev {
+
+            initWith            debug
+            debuggable          true
+            minifyEnabled       false
+            zipAlignEnabled     false
+            consumerProguardFiles "$project.rootDir/tools/obfuscation/" \
+                                    + "commons/proguard-consumer-rules-debug.pro"
+
+            // Add further DEV configurations here
+
+        }
+
+        // Add further custom build types here, for example Internal QA and External QA builds
+
+    }
+
+}
+
+android.variantFilter { variant ->
+    if (variant.buildType.name.endsWith('release') || variant.buildType.name.endsWith('debug')) {
+        variant.setIgnore(true)
+    }
+}

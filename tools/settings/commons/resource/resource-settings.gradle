@@ -1,5 +1,5 @@
 def final resourcesPropertiesFile =
-        file('../tools/settings/resource/resources.properties') // pay attention to the path
+        file('../tools/settings/commons/resource/resources.properties') // pay attention to the path
 def final invalidResourcesPropertiesExceptionMessage =
         'You should define MAIN_RESOURCE_FOLDERS in ' \
         + resourcesPropertiesFile \

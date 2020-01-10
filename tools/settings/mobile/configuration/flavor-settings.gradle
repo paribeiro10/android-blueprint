@@ -1,4 +1,4 @@
-apply from: "$project.rootDir/tools/settings/configuration/variant-settings.gradle"
+apply from: "$project.rootDir/tools/settings/mobile/configuration/variant-settings.gradle"
 
 android {
 

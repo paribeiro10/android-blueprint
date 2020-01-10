@@ -1,3 +1,3 @@
-include ':commons'
 include ':mobile'
+include ':commons'
 rootProject.name = "Blueprint"

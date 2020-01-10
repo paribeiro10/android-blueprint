@@ -1,5 +1,5 @@
 def final keystorePropertiesFile =
-        file('../tools/settings/signing/keystore.properties') // pay attention to the path
+        file('../tools/settings/shared/signing/keystore.properties') // pay attention to the path
 def final invalidKeystorePropertiesExceptionMessage =
         'You should define KEYSTORE, KEY and KEYALIAS in ' \
         + keystorePropertiesFile \
