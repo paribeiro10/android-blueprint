@@ -24,8 +24,8 @@ android {
         qa {
             initWith            debug
             debuggable          true
-            minifyEnabled       false
-            shrinkResources     false
+            minifyEnabled       true
+            shrinkResources     true
             zipAlignEnabled     true
             applicationIdSuffix versions.appIdSuffixQa
             proguardFiles       "$project.rootDir/tools/obfuscation/mobile/proguard-rules.pro"
