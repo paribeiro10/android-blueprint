@@ -1,8 +1,8 @@
 package com.paribeiro.blueprint.functional.support.bootstrap
 
-import android.app.Application
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
+import com.google.android.play.core.splitcompat.SplitCompatApplication
 import com.paribeiro.blueprint.BuildConfig
 import com.paribeiro.blueprint.construction.injection.components.DaggerApplicationComponent
 import dagger.android.DispatchingAndroidInjector
@@ -12,7 +12,7 @@ import javax.inject.Inject
 /**
  * Base class for the Blueprint application.
  */
-open class Blueprint @Inject constructor(): Application(), HasAndroidInjector {
+open class Blueprint @Inject constructor(): SplitCompatApplication(), HasAndroidInjector {
 
     @Inject
     lateinit var androidInjector: DispatchingAndroidInjector<Any>

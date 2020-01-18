@@ -10,6 +10,7 @@ buildscript {
             kotlinVersion : '1.3.61', // Kotlin Configuration
             seekVersions  : '0.27.0' // Project Dependency Update Crawler Plugin
         ]
+        kotlin_version = '1.3.61'
     }
 
     repositories {
@@ -24,6 +25,7 @@ buildscript {
             + "$globalDependencyVersions.kotlinVersion"
         classpath "com.github.ben-manes:gradle-versions-plugin:" \
             + "$globalDependencyVersions.seekVersions"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 
 }

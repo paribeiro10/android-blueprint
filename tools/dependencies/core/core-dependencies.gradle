@@ -1,0 +1,9 @@
+apply from: "$project.rootDir/tools/dependencies/core/core-libraries.gradle"
+
+dependencies { configuration ->
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // TODO
+
+    // add more dependency groups here
+}

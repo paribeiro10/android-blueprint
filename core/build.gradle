@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+apply from: "$project.rootDir/tools/dependencies/core/core-versions.gradle"
+apply from: "$project.rootDir/tools/settings/core/configuration/build-settings.gradle"
+apply from: "$project.rootDir/tools/settings/core/resource/resource-settings.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion             versions.minSdk
+        targetSdkVersion          versions.targetSdk
+        testInstrumentationRunner versions.testInstrumentationRunner
+        versionCode               versions.versionCode
+        versionName               versions.versionName
+    }
+
+}
+
+apply from: "$project.rootDir/tools/settings/shared/development/development-settings.gradle"
+apply from: "$project.rootDir/tools/dependencies/core/core-dependencies.gradle"

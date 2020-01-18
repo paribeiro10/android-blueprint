@@ -13,6 +13,11 @@ ext.libraries = [
         base : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
     ],
 
+    /* Android Play Store Frameworks */
+    playCore : [
+        base : "com.google.android.play:core:$versions.playCoreVersion"
+    ],
+
     /* Android Jetpack Frameworks */
     androidJetpack : [
         gridLayout
