@@ -1,6 +1,12 @@
 ext.versions = [
 
-    // TODO
+    /* Networking Frameworks */
+    // TODO PR: Add Networking dependency versions here
+
+    /* Database Frameworks */
+    // TODO PR: Add Database dependency versions here
+
+    // add more dependency version here
 
     /* Android Module Configuration */
     compileSdk: 29,

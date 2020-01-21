@@ -86,9 +86,6 @@ ext.libraries = [
                 + "$versions.daggerVersion"
     ],
 
-    /* Networking Frameworks */
-    // TODO PR: Add Networking dependency library declarations here
-
     /* User Interface Frameworks */
     // TODO PR: Add UI dependency library declarations here
 

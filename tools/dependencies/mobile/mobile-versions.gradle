@@ -27,9 +27,6 @@ ext.versions = [
     /* Dependency Injection Frameworks */
     daggerVersion: '2.25.4',
 
-    /* Networking Frameworks */
-    // TODO PR: Add Networking dependency versions here
-
     /* User Interface Frameworks */
     // TODO PR: Add UI dependency versions here
 

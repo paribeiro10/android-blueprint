@@ -1,25 +1,6 @@
 ext.versions = [
 
-    /* QA */
-    espressoCoreVersion   : '3.3.0-alpha03',
-    espressoRunnerVersion : '1.3.0-alpha03',
-    jUnitVersion          : '4.13',
-    jUnitAndroidXVersion  : '1.1.2-alpha03',
-
-    /* Kotlin Frameworks */
-    kotlinVersion         : '1.3.61',
-
-    /* Android Jetpack Frameworks */
-    jetpackVersion                      : '1.2.0-alpha01',
-    jetpackGridlayoutVersion            : '1.0.0',
-    jetpackConstraintlayoutVersion      : '2.0.0-beta4',
-    jetpackMultidexVersion              : '2.0.1',
-    jetpackPagingVersion                : '2.1.1',
-    jetpackRecyclerviewSelectionVersion : '1.1.0-beta01',
-    jetpackLifecycleVersion             : '2.2.0-rc03',
-    jetpackCardviewVersion              : '1.0.0',
-    jetpackDesignVersion                : '1.2.0-alpha03',
-    jetpackRecyclerviewVersion          : '1.2.0-alpha01',
+    // add more dependency version here
 
     /* Android Module Configuration */
     compileSdk: 29,
