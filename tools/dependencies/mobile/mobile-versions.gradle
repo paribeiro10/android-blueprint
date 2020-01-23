@@ -19,9 +19,9 @@ ext.versions = [
     jetpackMultidexVersion              : '2.0.1',
     jetpackPagingVersion                : '2.1.1',
     jetpackRecyclerviewSelectionVersion : '1.1.0-beta01',
-    jetpackLifecycleVersion             : '2.2.0-rc03',
+    jetpackLifecycleVersion             : '2.2.0',
     jetpackCardviewVersion              : '1.0.0',
-    jetpackDesignVersion                : '1.2.0-alpha03',
+    jetpackDesignVersion                : '1.2.0-alpha04',
     jetpackRecyclerviewVersion          : '1.2.0-alpha01',
 
     /* Dependency Injection Frameworks */
