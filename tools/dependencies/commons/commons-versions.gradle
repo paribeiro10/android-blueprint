@@ -1,5 +1,8 @@
 ext.versions = [
 
+    /* Dependency Injection Frameworks */
+    daggerVersion: '2.25.4',
+
     // add more dependency version here
 
     /* Android Module Configuration */

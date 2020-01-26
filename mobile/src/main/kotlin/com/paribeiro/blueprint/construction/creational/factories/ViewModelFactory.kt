@@ -2,11 +2,11 @@ package com.paribeiro.blueprint.construction.creational.factories
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.paribeiro.blueprint.construction.injection.scopes.AppScope
 import javax.inject.Inject
 import javax.inject.Provider
-import javax.inject.Singleton
 
-@Singleton
+@AppScope
 class ViewModelFactory @Inject constructor(private val creators: Map<Class <out ViewModel>,
         @JvmSuppressWildcards Provider<ViewModel>>) : ViewModelProvider.Factory {
 

@@ -3,5 +3,19 @@ apply from: "$project.rootDir/tools/dependencies/commons/commons-libraries.gradl
 dependencies { configuration ->
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    injectionDependencies(libraries, configuration)        /* Dagger2 */
+
     // add more dependency groups here
+}
+
+/** Dependency Injection Dependencies Group. */
+private static void injectionDependencies(libraries, configuration) {
+    configuration.api libraries.dagger.androidSupport
+    configuration.api libraries.dagger.android
+    configuration.api libraries.dagger.base
+
+    configuration.kapt libraries.dagger.compiler
+    configuration.kapt libraries.dagger.androidProcessor
+
+    // add more dependencies here
 }
