@@ -1,4 +1,4 @@
-package com.paribeiro.blueprint.functional.support.utilities.extensions
+package com.paribeiro.blueprint.commons.functional.support.utilities.extensions
 
 import android.content.Context
 

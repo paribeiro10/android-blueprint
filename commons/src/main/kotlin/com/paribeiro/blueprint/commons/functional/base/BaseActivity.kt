@@ -1,4 +1,4 @@
-package com.paribeiro.blueprint.functional.section.base
+package com.paribeiro.blueprint.commons.functional.base
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -17,7 +17,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.paribeiro.blueprint.functional.support.utilities.extensions.isTablet
+import com.paribeiro.blueprint.commons.functional.support.utilities.extensions.isTablet
 import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector

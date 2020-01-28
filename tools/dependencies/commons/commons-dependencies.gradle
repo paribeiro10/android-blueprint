@@ -3,9 +3,53 @@ apply from: "$project.rootDir/tools/dependencies/commons/commons-libraries.gradl
 dependencies { configuration ->
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    qualityAssuranceDependencies(libraries, configuration) /* Quality Assurance */
+    kotlinDependencies(libraries, configuration)           /* Kotlin */
+    jetpackDependencies(libraries, configuration)          /* Android Jetpack */
     injectionDependencies(libraries, configuration)        /* Dagger2 */
 
     // add more dependency groups here
+}
+
+/** QA Dependencies Group. */
+private static void qualityAssuranceDependencies(libraries, configuration) {
+    configuration.androidTestImplementation(libraries.qualityAssurance.espressoCore, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    configuration.androidTestImplementation libraries.qualityAssurance.espressoRunner
+    configuration.androidTestImplementation libraries.qualityAssurance.jUnitAndroidX
+    configuration.testImplementation        libraries.qualityAssurance.jUnit
+
+    // add more QA dependencies here if necessary
+}
+
+/** Kotlin Dependencies Group. */
+private static void kotlinDependencies(libraries, configuration) {
+    configuration.api libraries.kotlin.base
+
+    // add more Kotlin dependencies here if necessary
+}
+
+/** Android Jetpack Dependencies Group. */
+private static void jetpackDependencies(libraries, configuration) {
+    configuration.api libraries.androidJetpack.gridLayout
+    configuration.api libraries.androidJetpack.constraintLayout
+    configuration.api libraries.androidJetpack.lifecycleRuntime
+    configuration.api libraries.androidJetpack.multidex
+    configuration.api libraries.androidJetpack.viewModelKotlin
+    configuration.api libraries.androidJetpack.paging
+    configuration.api libraries.androidJetpack.recyclerViewSelection
+    configuration.api libraries.androidJetpack.lifecycle
+    configuration.api libraries.androidJetpack.liveData
+    configuration.api libraries.androidJetpack.cardView
+    configuration.api libraries.androidJetpack.design
+    configuration.api libraries.androidJetpack.recyclerView
+    configuration.api libraries.androidJetpack.viewModel
+    configuration.api libraries.androidJetpack.base
+
+    configuration.kapt libraries.androidJetpack.lifecycleCompiler
+
+    // add more Android Jetpack dependencies here if necessary
 }
 
 /** Dependency Injection Dependencies Group. */

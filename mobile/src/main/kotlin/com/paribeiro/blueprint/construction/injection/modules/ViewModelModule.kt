@@ -2,7 +2,7 @@ package com.paribeiro.blueprint.construction.injection.modules
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.paribeiro.blueprint.construction.creational.factories.ViewModelFactory
+import com.paribeiro.blueprint.commons.construction.creational.factories.ViewModelFactory
 import com.paribeiro.blueprint.construction.injection.annotations.ViewModelKey
 import com.paribeiro.blueprint.functional.section.activities.splash.SplashViewModel
 import dagger.Binds
