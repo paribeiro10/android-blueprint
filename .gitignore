@@ -120,7 +120,7 @@ obj/
 .idea/uiDesigner.xml
 
 # Keystore files
-gradle.properties
+#gradle.properties
 keystore.properties
 
 # OS-specific files
