@@ -7,10 +7,10 @@ ext.libraries = [
 
     /* Dependency Injection Frameworks */
     dagger : [
-        compiler
+        compiler \
             : "com.google.dagger:dagger-compiler:" \
                  + "$versions.daggerVersion",
-        androidProcessor
+        androidProcessor \
             : "com.google.dagger:dagger-android-processor:" \
                  + "$versions.daggerVersion"
     ],

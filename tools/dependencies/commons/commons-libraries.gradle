@@ -15,68 +15,68 @@ ext.libraries = [
 
     /* Android Jetpack Frameworks */
     androidJetpack : [
-        gridLayout
+        gridLayout \
             : "androidx.gridlayout:gridlayout:" \
                 + "$versions.jetpackGridlayoutVersion",
-        constraintLayout
+        constraintLayout \
             : "androidx.constraintlayout:constraintlayout:" \
                 + "$versions.jetpackConstraintlayoutVersion",
-        multidex
+        multidex \
             : "androidx.multidex:multidex:" \
                 + "$versions.jetpackMultidexVersion",
-        paging
+        paging \
             : "androidx.paging:paging-runtime:" \
                 + "$versions.jetpackPagingVersion",
-        recyclerViewSelection
+        recyclerViewSelection \
             : "androidx.recyclerview:recyclerview-selection:" \
                 + "$versions.jetpackRecyclerviewSelectionVersion",
-        lifecycle
+        lifecycle \
             : "androidx.lifecycle:lifecycle-extensions:" \
-                + "$versions.jetpackLifecycleVersion",
-        lifecycleCompiler
+                + "$versions.jetpackLifecycleExtensionsVersion",
+        lifecycleCompiler \
             : "androidx.lifecycle:lifecycle-compiler:" \
                 + "$versions.jetpackLifecycleVersion",
-        liveData
+        liveData \
             : "androidx.lifecycle:lifecycle-livedata:" \
                 + "$versions.jetpackLifecycleVersion",
-        viewModel
+        viewModel \
             : "androidx.lifecycle:lifecycle-viewmodel:" \
                 + "$versions.jetpackLifecycleVersion",
-        viewModelKotlin
+        viewModelKotlin \
             : "androidx.lifecycle:lifecycle-viewmodel-ktx:" \
                 + "$versions.jetpackLifecycleVersion",
-        lifecycleRuntime
+        lifecycleRuntime \
             : "androidx.lifecycle:lifecycle-runtime:" \
                 + "$versions.jetpackLifecycleVersion",
-        cardView
+        cardView \
             : "androidx.cardview:cardview:" \
                 + "$versions.jetpackCardviewVersion",
-        design
+        design \
             : "com.google.android.material:material:" \
                 + "$versions.jetpackDesignVersion",
-        recyclerView
+        recyclerView \
             : "androidx.recyclerview:recyclerview:" \
                 + "$versions.jetpackRecyclerviewVersion",
-        base
+        base \
             : "androidx.appcompat:appcompat:" \
                 + "$versions.jetpackVersion"
     ],
 
     /* Dependency Injection Frameworks */
     dagger : [
-        androidSupport
+        androidSupport \
             : "com.google.dagger:dagger-android-support:" \
                 + "$versions.daggerVersion",
-        compiler
+        compiler \
             : "com.google.dagger:dagger-compiler:" \
                 + "$versions.daggerVersion",
-        androidProcessor
+        androidProcessor \
             : "com.google.dagger:dagger-android-processor:" \
                 + "$versions.daggerVersion",
-        android
+        android \
             : "com.google.dagger:dagger-android:" \
                 + "$versions.daggerVersion",
-        base
+        base \
             : "com.google.dagger:dagger:" \
                 + "$versions.daggerVersion"
     ],

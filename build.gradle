@@ -6,9 +6,9 @@ buildscript {
 
     ext {
         globalDependencyVersions = [
-            gradleVersion : '4.2.0-alpha12', // Gradle Configuration
-            kotlinVersion : '1.3.61', // Kotlin Configuration
-            seekVersions  : '0.28.0' // Project Dependency Update Crawler Plugin
+            gradleVersion : '7.1.0-alpha08', // Gradle Configuration
+            kotlinVersion : '1.5.30-RC', // Kotlin Configuration
+            seekVersions  : '0.36.0' // Project Dependency Update Crawler Plugin
         ]
     }
 

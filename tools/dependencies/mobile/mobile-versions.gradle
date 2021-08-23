@@ -1,10 +1,10 @@
 ext.versions = [
 
     /* Android Play Store Frameworks */
-    playCoreVersion: '1.6.5',
+    playCoreVersion: '1.10.0',
 
     /* Dependency Injection Frameworks */
-    daggerVersion: '2.26',
+    daggerVersion: '2.38.1',
 
     /* User Interface Frameworks */
     // TODO PR: Add UI dependency versions here
@@ -15,9 +15,9 @@ ext.versions = [
     gradleVersion: '3.5.3',
 
     /* Android Configuration */
-    compileSdk: 29,
-    targetSdk: 29,
-    minSdk: 19,
+    compileSdk: 30,
+    targetSdk: 30,
+    minSdk: 21,
     buildTools: '29.0.2',
     applicationId: 'pt.paribeiro.blueprint',
     testInstrumentationRunner: 'androidx.test.runner.AndroidJUnitRunner',
