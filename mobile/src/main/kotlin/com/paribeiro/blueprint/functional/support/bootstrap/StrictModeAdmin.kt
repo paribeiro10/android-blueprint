@@ -14,7 +14,7 @@ object StrictModeAdmin {
                 .detectLeakedSqlLiteObjects()
                 .detectLeakedClosableObjects()
                 .penaltyLog()
-                .build()
+            .build()
         )
     }
 
@@ -28,7 +28,7 @@ object StrictModeAdmin {
                     .detectDiskWrites()
                     .detectNetwork()
                     .penaltyLog()
-                    .build()
+                .build()
             )
         }
     }
@@ -41,13 +41,11 @@ object StrictModeAdmin {
     fun permitDiskReads(func: () -> Any) : Any = if (BuildConfig.DEBUG) {
         val oldThreadPolicy = StrictMode.getThreadPolicy()
         StrictMode.setThreadPolicy(
-            StrictMode.ThreadPolicy.Builder(oldThreadPolicy)
-                .permitDiskReads().build())
+            StrictMode.ThreadPolicy.Builder(oldThreadPolicy).permitDiskReads().build()
+        )
         val anyValue = func()
         StrictMode.setThreadPolicy(oldThreadPolicy)
         anyValue
-    } else {
-        func()
-    }
+    } else { func() }
 
 }

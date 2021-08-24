@@ -18,8 +18,7 @@ import javax.inject.Inject
 open class Blueprint @Inject constructor(): SplitCompatApplication(),
     CommonsComponentProvider, HasAndroidInjector {
 
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+    @Inject lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
     private lateinit var commonsComponent: CommonsComponent
 
@@ -30,7 +29,7 @@ open class Blueprint @Inject constructor(): SplitCompatApplication(),
         DaggerApplicationComponent.builder()
             .application(this)
             .commonsComponent(provideCommonsComponent())
-            .build().inject(this)
+        .build().inject(this)
     }
 
     override fun onCreate() {

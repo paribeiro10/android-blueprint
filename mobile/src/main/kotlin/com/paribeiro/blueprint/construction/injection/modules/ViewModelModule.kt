@@ -14,7 +14,7 @@ abstract class ViewModelModule {
 
     @Binds
     abstract fun bindsViewModelFactory(viewModelFactory: ViewModelFactory)
-            : ViewModelProvider.Factory
+    : ViewModelProvider.Factory
 
     @Binds
     @IntoMap

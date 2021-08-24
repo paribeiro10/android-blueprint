@@ -26,11 +26,8 @@ import javax.inject.Inject
 abstract class BaseActivity<T : ViewDataBinding, VM : ViewModel> : AppCompatActivity(),
     HasAndroidInjector {
 
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
-
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject lateinit var androidInjector: DispatchingAndroidInjector<Any>
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
 
     protected val dataBinding: T by lazy {
         DataBindingUtil.setContentView<T>(this, layoutToInflate())
@@ -40,8 +37,7 @@ abstract class BaseActivity<T : ViewDataBinding, VM : ViewModel> : AppCompatActi
         ViewModelProvider(this, viewModelFactory).get(getViewModelClass())
     }
 
-    @LayoutRes
-    abstract fun layoutToInflate(): Int
+    @LayoutRes abstract fun layoutToInflate(): Int
 
     abstract fun getViewModelClass(): Class<VM>
 

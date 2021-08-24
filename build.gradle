@@ -6,15 +6,16 @@ buildscript {
 
     ext {
         globalDependencyVersions = [
-            gradleVersion : '7.1.0-alpha08', // Gradle Configuration
+            gradleVersion : '7.1.0-alpha09', // Gradle Configuration
             kotlinVersion : '1.5.30-RC', // Kotlin Configuration
-            seekVersions  : '0.36.0' // Project Dependency Update Crawler Plugin
+            seekVersions  : '0.39.0' // Project Dependency Update Crawler Plugin
         ]
     }
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
     }
 
     dependencies {
@@ -32,7 +33,8 @@ allprojects {
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
     }
 
 }
