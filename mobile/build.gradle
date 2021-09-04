@@ -8,7 +8,7 @@ apply from: "$project.rootDir/tools/settings/mobile/resource/resource-settings.g
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
 
 android {
 
