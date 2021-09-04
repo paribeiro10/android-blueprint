@@ -1,7 +1,7 @@
 ext.versions = [
 
     /* Android Play Store Frameworks */
-    playCoreVersion: '1.10.0',
+    playCoreVersion: '1.10.1',
 
     /* Dependency Injection Frameworks */
     daggerVersion: '2.38.1',

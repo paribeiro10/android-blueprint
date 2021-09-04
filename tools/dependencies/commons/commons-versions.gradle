@@ -1,13 +1,13 @@
 ext.versions = [
 
     /* QA */
-    espressoCoreVersion   : '3.4.0',
-    espressoRunnerVersion : '1.4.0',
+    espressoCoreVersion   : '3.5.0-alpha01',
+    espressoRunnerVersion : '1.4.1-alpha01',
     jUnitVersion          : '4.13.2',
-    jUnitAndroidXVersion  : '1.1.3',
+    jUnitAndroidXVersion  : '1.1.4-alpha01',
 
     /* Kotlin Frameworks */
-    kotlinVersion: '1.5.30-RC',
+    kotlinVersion: '1.5.30',
 
     /* Android Jetpack Frameworks */
     jetpackVersion                      : '1.4.0-alpha03',
