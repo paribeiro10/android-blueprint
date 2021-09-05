@@ -20,7 +20,7 @@ ext.versions = [
     jetpackLifecycleVersion             : '2.4.0-alpha03',
 
     jetpackCardviewVersion              : '1.0.0',
-    jetpackDesignVersion                : '1.5.0-alpha02',
+    jetpackDesignVersion                : '1.5.0-alpha02', // alpha03 breaks build
     jetpackRecyclerviewVersion          : '1.2.1',
 
     /* Dependency Injection Frameworks */
@@ -29,8 +29,8 @@ ext.versions = [
     // add more dependency version here
 
     /* Android Module Configuration */
-    compileSdk: 30,
-    targetSdk: 30,
+    compileSdk: 31,
+    targetSdk: 31,
     minSdk: 21,
     buildTools: '30.0.3',
     testInstrumentationRunner: 'androidx.test.runner.AndroidJUnitRunner',

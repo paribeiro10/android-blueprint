@@ -1,14 +1,16 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.android.gms.strict-version-matcher-plugin'
+}
 
 apply from: "$project.rootDir/tools/settings/shared/development/git-version.gradle"
 apply from: "$project.rootDir/tools/dependencies/mobile/mobile-versions.gradle"
 apply from: "$project.rootDir/tools/settings/shared/signing/signing-settings.gradle"
 apply from: "$project.rootDir/tools/settings/mobile/configuration/build-settings.gradle"
 apply from: "$project.rootDir/tools/settings/mobile/resource/resource-settings.gradle"
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-parcelize'
 
 android {
 

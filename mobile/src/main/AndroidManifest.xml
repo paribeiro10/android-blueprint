@@ -1,3 +1,5 @@
+<!-- @see <a href="https://developer.android.com/guide/topics/manifest/manifest-intro"/>
+ for more details regarding manifest properties. -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -30,6 +32,7 @@
             android:name=".functional.section.activities.splash.Splash"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
         >
 
             <!-- Launcher Filter -->

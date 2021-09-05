@@ -1,12 +1,14 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.android.gms.strict-version-matcher-plugin'
+}
 
 apply from: "$project.rootDir/tools/dependencies/core/core-versions.gradle"
 apply from: "$project.rootDir/tools/settings/core/configuration/build-settings.gradle"
 apply from: "$project.rootDir/tools/settings/core/resource/resource-settings.gradle"
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-parcelize'
 
 android {
 

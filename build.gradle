@@ -6,9 +6,10 @@ buildscript {
 
     ext {
         globalDependencyVersions = [
-            gradleVersion : '7.1.0-alpha10', // Gradle Configuration
-            kotlinVersion : '1.5.30', // Kotlin Configuration
-            seekVersions  : '0.39.0' // Project Dependency Update Crawler Plugin
+            gradleVersion : '7.1.0-alpha11', // Gradle Configuration
+            kotlinVersion : '1.5.30',        // Kotlin Configuration
+            gmsMatcher : '1.2.2',            // GMS Matcher Configuration
+            seekVersions  : '0.39.0'         // Project Dependency Update Crawler Plugin
         ]
     }
 
@@ -23,6 +24,8 @@ buildscript {
             + "$globalDependencyVersions.gradleVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:" \
             + "$globalDependencyVersions.kotlinVersion"
+        classpath "com.google.android.gms:strict-version-matcher-plugin:" \
+            + "$globalDependencyVersions.gmsMatcher"
         classpath "com.github.ben-manes:gradle-versions-plugin:" \
             + "$globalDependencyVersions.seekVersions"
     }
