@@ -2,11 +2,11 @@ package com.paribeiro.blueprint.functional.support.bootstrap
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
+import blueprint.libraries.architecture_components.construction.injection.ArchitectureComponentsComponentProvider
+import blueprint.libraries.architecture_components.construction.injection.components.ArchitectureComponentsComponent
+import blueprint.libraries.architecture_components.construction.injection.components.DaggerArchitectureComponentsComponent
 import com.google.android.play.core.splitcompat.SplitCompatApplication
 import com.paribeiro.blueprint.BuildConfig
-import com.paribeiro.blueprint.commons.construction.injection.CommonsComponentProvider
-import com.paribeiro.blueprint.commons.construction.injection.components.CommonsComponent
-import com.paribeiro.blueprint.commons.construction.injection.components.DaggerCommonsComponent
 import com.paribeiro.blueprint.construction.injection.components.DaggerApplicationComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -16,11 +16,11 @@ import javax.inject.Inject
  * Base class for the Blueprint application.
  */
 open class Blueprint @Inject constructor(): SplitCompatApplication(),
-    CommonsComponentProvider, HasAndroidInjector {
+    ArchitectureComponentsComponentProvider, HasAndroidInjector {
 
     @Inject lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
-    private lateinit var commonsComponent: CommonsComponent
+    private lateinit var architectureComponentsComponent: ArchitectureComponentsComponent
 
     override fun androidInjector() = androidInjector
 
@@ -28,7 +28,7 @@ open class Blueprint @Inject constructor(): SplitCompatApplication(),
         super.attachBaseContext(base)
         DaggerApplicationComponent.builder()
             .application(this)
-            .commonsComponent(provideCommonsComponent())
+            .architectureComponentsComponent(provideArchitectureComponentsComponent())
         .build().inject(this)
     }
 
@@ -37,11 +37,11 @@ open class Blueprint @Inject constructor(): SplitCompatApplication(),
         initializeDevTools()
     }
 
-    override fun provideCommonsComponent(): CommonsComponent {
-        if (!this::commonsComponent.isInitialized) {
-            commonsComponent = DaggerCommonsComponent.builder().build()
+    override fun provideArchitectureComponentsComponent(): ArchitectureComponentsComponent {
+        if (!this::architectureComponentsComponent.isInitialized) {
+            architectureComponentsComponent = DaggerArchitectureComponentsComponent.builder().build()
         }
-        return commonsComponent
+        return architectureComponentsComponent
     }
 
     private fun initializeDevTools() {

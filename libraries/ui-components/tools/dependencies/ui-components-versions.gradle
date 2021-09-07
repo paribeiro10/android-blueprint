@@ -1,0 +1,21 @@
+ext.versions = [
+
+    /* QA */
+    espressoCoreVersion   : '3.5.0-alpha01',
+    espressoRunnerVersion : '1.4.1-alpha01',
+    jUnitVersion          : '4.13.2',
+    jUnitAndroidXVersion  : '1.1.4-alpha01',
+
+    /* Kotlin Frameworks */
+    kotlinVersion: '1.5.30',
+
+    /* Dependency Injection Frameworks */
+    daggerVersion: '2.38.1',
+
+    // add more dependency version here
+
+    /* Module Build Properties */
+    versionCode: 1,
+    versionName: '1.0.0'
+
+]

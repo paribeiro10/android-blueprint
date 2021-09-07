@@ -14,15 +14,9 @@ apply from: "$project.rootDir/tools/settings/mobile/resource/resource-settings.g
 
 android {
 
-    compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
-
     defaultConfig {
-        applicationId             versions.applicationId
-        minSdkVersion             versions.minSdk
-        targetSdkVersion          versions.targetSdk
-        testInstrumentationRunner versions.testInstrumentationRunner
-        multiDexEnabled           true
+        applicationId   versions.applicationId
+        multiDexEnabled true
     }
 
 }

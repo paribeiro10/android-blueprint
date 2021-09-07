@@ -14,13 +14,10 @@ ext.versions = [
     /* Gradle Configuration */
     gradleVersion: '3.5.3',
 
+    // add more dependency version here
+
     /* Android Configuration */
-    compileSdk: 31,
-    targetSdk: 31,
-    minSdk: 21,
-    buildTools: '30.0.3',
     applicationId: 'pt.paribeiro.blueprint',
-    testInstrumentationRunner: 'androidx.test.runner.AndroidJUnitRunner',
 
     /* Build Properties */
     appIdSuffixDev: '.dev',

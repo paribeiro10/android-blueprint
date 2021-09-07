@@ -1,7 +1,7 @@
 package com.paribeiro.blueprint.functional.section.activities.splash
 
+import blueprint.libraries.architecture_components.functional.base.BaseActivity
 import com.paribeiro.blueprint.R
-import com.paribeiro.blueprint.commons.functional.base.BaseActivity
 import com.paribeiro.blueprint.databinding.ActivitySplashBinding
 
 class Splash: BaseActivity<ActivitySplashBinding, SplashViewModel>() {

@@ -1,0 +1,35 @@
+ext.versions = [
+
+    /* QA */
+    espressoCoreVersion   : '3.5.0-alpha01',
+    espressoRunnerVersion : '1.4.1-alpha01',
+    jUnitVersion          : '4.13.2',
+    jUnitAndroidXVersion  : '1.1.4-alpha01',
+
+    /* Kotlin Frameworks */
+    kotlinVersion: '1.5.30',
+
+    /* Android Jetpack Frameworks */
+    jetpackVersion                      : '1.4.0-alpha03',
+    jetpackGridlayoutVersion            : '1.0.0',
+    jetpackConstraintlayoutVersion      : '2.1.0',
+    jetpackMultidexVersion              : '2.0.1',
+    jetpackPagingVersion                : '3.1.0-alpha03',
+    jetpackRecyclerviewSelectionVersion : '1.2.0-alpha01',
+    jetpackLifecycleExtensionsVersion   : '2.2.0',
+    jetpackLifecycleVersion             : '2.4.0-alpha03',
+
+    jetpackCardviewVersion              : '1.0.0',
+    jetpackDesignVersion                : '1.5.0-alpha02', // alpha03 breaks build
+    jetpackRecyclerviewVersion          : '1.2.1',
+
+    /* Dependency Injection Frameworks */
+    daggerVersion: '2.38.1',
+
+    // add more dependency version here
+
+    /* Module Build Properties */
+    versionCode: 1,
+    versionName: '1.0.0'
+
+]

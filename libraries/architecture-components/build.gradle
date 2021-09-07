@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.android.gms.strict-version-matcher-plugin'
+}
+
+apply from: "$project.rootDir/libraries/architecture-components/tools/dependencies/architecture-components-versions.gradle"
+apply from: "$project.rootDir/tools/settings/features/configuration/build-settings.gradle"
+apply from: "$project.rootDir/libraries/architecture-components/tools/resource/resource-settings.gradle"
+
+android {
+
+    defaultConfig {
+        versionCode versions.versionCode
+        versionName versions.versionName
+    }
+
+}
+
+apply from: "$project.rootDir/tools/settings/shared/development/development-settings.gradle"
+apply from: "$project.rootDir/libraries/architecture-components/tools/dependencies/architecture-components-dependencies.gradle"

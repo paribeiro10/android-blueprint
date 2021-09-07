@@ -1,0 +1,42 @@
+apply from: "$project.rootDir/features/static/onboarding/tools/dependencies/onboarding-libraries.gradle"
+
+dependencies { configuration ->
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    qualityAssuranceDependencies(libraries, configuration) /* Quality Assurance */
+    kotlinDependencies(libraries, configuration)           /* Kotlin */
+    injectionDependencies(libraries, configuration)        /* Dagger2 */
+
+    // add more dependency groups here
+}
+
+/** QA Dependencies Group. */
+private static void qualityAssuranceDependencies(libraries, configuration) {
+    configuration.androidTestImplementation(libraries.qualityAssurance.espressoCore, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    configuration.androidTestImplementation libraries.qualityAssurance.espressoRunner
+    configuration.androidTestImplementation libraries.qualityAssurance.jUnitAndroidX
+    configuration.testImplementation        libraries.qualityAssurance.jUnit
+
+    // add more QA dependencies here if necessary
+}
+
+/** Kotlin Dependencies Group. */
+private static void kotlinDependencies(libraries, configuration) {
+    configuration.api libraries.kotlin.base
+
+    // add more Kotlin dependencies here if necessary
+}
+
+/** Dependency Injection Dependencies Group. */
+private static void injectionDependencies(libraries, configuration) {
+    configuration.api libraries.dagger.androidSupport
+    configuration.api libraries.dagger.android
+    configuration.api libraries.dagger.base
+
+    configuration.kapt libraries.dagger.compiler
+    configuration.kapt libraries.dagger.androidProcessor
+
+    // add more dependencies here
+}

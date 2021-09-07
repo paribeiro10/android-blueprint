@@ -1,0 +1,37 @@
+ext.libraries = [
+
+    /* QA */
+    qualityAssurance : [
+        espressoCore   : "androidx.test.espresso:espresso-core:$versions.espressoCoreVersion",
+        espressoRunner : "androidx.test:runner:$versions.espressoRunnerVersion",
+        jUnit          : "junit:junit:$versions.jUnitVersion",
+        jUnitAndroidX  : "androidx.test.ext:junit:$versions.jUnitAndroidXVersion"
+    ],
+
+    /* Kotlin Frameworks */
+    kotlin : [
+        base : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
+    ],
+
+    /* Dependency Injection Frameworks */
+    dagger : [
+        androidSupport \
+            : "com.google.dagger:dagger-android-support:" \
+                + "$versions.daggerVersion",
+        compiler \
+            : "com.google.dagger:dagger-compiler:" \
+                + "$versions.daggerVersion",
+        androidProcessor \
+            : "com.google.dagger:dagger-android-processor:" \
+                + "$versions.daggerVersion",
+        android \
+            : "com.google.dagger:dagger-android:" \
+                + "$versions.daggerVersion",
+        base \
+            : "com.google.dagger:dagger:" \
+                + "$versions.daggerVersion"
+    ],
+
+    // Add more Commons dependency library declarations here if necessary
+
+]

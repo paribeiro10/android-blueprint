@@ -3,11 +3,13 @@ apply from: "$project.rootDir/tools/dependencies/mobile/mobile-libraries.gradle"
 dependencies { configuration ->
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    playCoreDependencies(libraries, configuration)         /* Google Play Core */
-    injectionDependencies(libraries, configuration)        /* Dagger2 */
+    playCoreDependencies(libraries, configuration)  /* Google Play Core */
+    injectionDependencies(libraries, configuration) /* Dagger2 */
 
-    //implementation project(':core')                        /* In Project Multi-Modules */
-    implementation project(':commons')                     /* In Project Multi-Modules */
+    /* In Project Static Multi-Modules */
+    implementation project(':features:static:onboarding')
+    implementation project(':libraries:architecture-components')
+    implementation project(':libraries:ui-components')
 
     // add more dependency groups here
 }

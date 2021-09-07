@@ -1,7 +1,7 @@
 package com.paribeiro.blueprint.construction.injection.components
 
 import android.app.Application
-import com.paribeiro.blueprint.commons.construction.injection.components.CommonsComponent
+import blueprint.libraries.architecture_components.construction.injection.components.ArchitectureComponentsComponent
 import com.paribeiro.blueprint.construction.injection.modules.ActivityBuilderModule
 import com.paribeiro.blueprint.construction.injection.modules.ViewModelModule
 import com.paribeiro.blueprint.construction.injection.scopes.AppScope
@@ -18,7 +18,7 @@ import dagger.android.AndroidInjector
         ViewModelModule::class
     ],
     dependencies = [
-        CommonsComponent::class
+        ArchitectureComponentsComponent::class
     ]
 )
 @AppScope
@@ -30,7 +30,9 @@ interface ApplicationComponent : AndroidInjector<Blueprint> {
         @BindsInstance
         fun application(application: Application): Builder
 
-        fun commonsComponent(commonsComponent: CommonsComponent): Builder
+        fun architectureComponentsComponent(
+            architectureComponentsComponent: ArchitectureComponentsComponent
+        ): Builder
 
         fun build(): ApplicationComponent
 
