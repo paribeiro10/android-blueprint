@@ -6,13 +6,28 @@ ext.libraries = [
     ],
 
     /* Dependency Injection Frameworks */
-    dagger : [
+//    dagger : [
+//        compiler \
+//            : "com.google.dagger:dagger-compiler:" \
+//                 + "$versions.daggerVersion",
+//        androidProcessor \
+//            : "com.google.dagger:dagger-android-processor:" \
+//                 + "$versions.daggerVersion"
+//    ],
+
+    daggerHilt : [
+        //        viewModel \
+        //            : "androidx.hilt:hilt-lifecycle-viewmodel:" \
+        //                + "$versions.daggerHiltVersion",
+        //        viewModelCompiler \
+        //            : "androidx.hilt:hilt-compiler:" \
+        //                + "$versions.daggerHiltVersion",
         compiler \
-            : "com.google.dagger:dagger-compiler:" \
-                 + "$versions.daggerVersion",
-        androidProcessor \
-            : "com.google.dagger:dagger-android-processor:" \
-                 + "$versions.daggerVersion"
+            : "com.google.dagger:hilt-compiler:" \
+                + "$versions.daggerHiltVersion",
+        base \
+            : "com.google.dagger:hilt-android:" \
+                + "$versions.daggerHiltVersion"
     ],
 
     /* User Interface Frameworks */

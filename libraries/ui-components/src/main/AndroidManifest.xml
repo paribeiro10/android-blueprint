@@ -1,1 +1,8 @@
-<manifest package="blueprint.libraries.ui_components"/>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="blueprint.libraries.ui_components"
+>
+
+    <application android:theme="@style/AppTheme.Base.NoActionBar" />
+
+</manifest>

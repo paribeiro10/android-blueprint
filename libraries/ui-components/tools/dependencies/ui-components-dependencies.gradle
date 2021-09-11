@@ -1,11 +1,11 @@
-apply from: "$project.rootDir/features/static/onboarding/tools/dependencies/onboarding-libraries.gradle"
+apply from: "$project.rootDir/libraries/ui-components/tools/dependencies/ui-components-libraries.gradle"
 
 dependencies { configuration ->
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     qualityAssuranceDependencies(libraries, configuration) /* Quality Assurance */
     kotlinDependencies(libraries, configuration)           /* Kotlin */
-    injectionDependencies(libraries, configuration)        /* Dagger2 */
+    materialDesignDependencies(libraries, configuration)   /* Android Material Design */
 
     // add more dependency groups here
 }
@@ -24,19 +24,16 @@ private static void qualityAssuranceDependencies(libraries, configuration) {
 
 /** Kotlin Dependencies Group. */
 private static void kotlinDependencies(libraries, configuration) {
-    configuration.api libraries.kotlin.base
+    configuration.implementation libraries.kotlin.base
 
     // add more Kotlin dependencies here if necessary
 }
 
-/** Dependency Injection Dependencies Group. */
-private static void injectionDependencies(libraries, configuration) {
-    configuration.api libraries.dagger.androidSupport
-    configuration.api libraries.dagger.android
-    configuration.api libraries.dagger.base
+/** Android Material Design Dependencies Group. */
+private static void materialDesignDependencies(libraries, configuration) {
+    configuration.api libraries.materialDesign.base
+    configuration.api libraries.materialDesign.recyclerView
+    configuration.api libraries.materialDesign.cardView
 
-    configuration.kapt libraries.dagger.compiler
-    configuration.kapt libraries.dagger.androidProcessor
-
-    // add more dependencies here
+    // add more Android Material Design dependencies here if necessary
 }

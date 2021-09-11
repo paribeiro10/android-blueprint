@@ -13,23 +13,17 @@ ext.libraries = [
         base : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
     ],
 
-    /* Dependency Injection Frameworks */
-    dagger : [
-        androidSupport \
-            : "com.google.dagger:dagger-android-support:" \
-                + "$versions.daggerVersion",
-        compiler \
-            : "com.google.dagger:dagger-compiler:" \
-                + "$versions.daggerVersion",
-        androidProcessor \
-            : "com.google.dagger:dagger-android-processor:" \
-                + "$versions.daggerVersion",
-        android \
-            : "com.google.dagger:dagger-android:" \
-                + "$versions.daggerVersion",
+    /* Android Material Design */
+    materialDesign : [
         base \
-            : "com.google.dagger:dagger:" \
-                + "$versions.daggerVersion"
+            : "com.google.android.material:material:" \
+                + "$versions.materialVersion",
+        recyclerView \
+            : "androidx.recyclerview:recyclerview:" \
+                + "$versions.recyclerviewVersion",
+        cardView \
+            : "androidx.cardview:cardview:" \
+                + "$versions.cardviewVersion"
     ],
 
     // Add more Commons dependency library declarations here if necessary

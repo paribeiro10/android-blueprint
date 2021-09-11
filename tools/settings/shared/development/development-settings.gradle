@@ -62,3 +62,8 @@ android {
     }
 
 }
+
+kapt {
+    correctErrorTypes true
+    //TODO
+}

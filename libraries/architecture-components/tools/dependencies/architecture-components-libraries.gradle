@@ -27,9 +27,9 @@ ext.libraries = [
         paging \
             : "androidx.paging:paging-runtime:" \
                 + "$versions.jetpackPagingVersion",
-        recyclerViewSelection \
-            : "androidx.recyclerview:recyclerview-selection:" \
-                + "$versions.jetpackRecyclerviewSelectionVersion",
+//        recyclerViewSelection \
+//            : "androidx.recyclerview:recyclerview-selection:" \
+//                + "$versions.jetpackRecyclerviewSelectionVersion",
         lifecycle \
             : "androidx.lifecycle:lifecycle-extensions:" \
                 + "$versions.jetpackLifecycleExtensionsVersion",
@@ -48,12 +48,12 @@ ext.libraries = [
         lifecycleRuntime \
             : "androidx.lifecycle:lifecycle-runtime:" \
                 + "$versions.jetpackLifecycleVersion",
-        cardView \
-            : "androidx.cardview:cardview:" \
-                + "$versions.jetpackCardviewVersion",
-        design \
-            : "com.google.android.material:material:" \
-                + "$versions.jetpackDesignVersion",
+//        cardView \
+//            : "androidx.cardview:cardview:" \
+//                + "$versions.jetpackCardviewVersion",
+//        design \
+//            : "com.google.android.material:material:" \
+//                + "$versions.jetpackDesignVersion",
         recyclerView \
             : "androidx.recyclerview:recyclerview:" \
                 + "$versions.jetpackRecyclerviewVersion",
@@ -63,22 +63,37 @@ ext.libraries = [
     ],
 
     /* Dependency Injection Frameworks */
-    dagger : [
-        androidSupport \
-            : "com.google.dagger:dagger-android-support:" \
-                + "$versions.daggerVersion",
+//    dagger : [
+//        androidSupport \
+//            : "com.google.dagger:dagger-android-support:" \
+//                + "$versions.daggerVersion",
+//        compiler \
+//            : "com.google.dagger:dagger-compiler:" \
+//                + "$versions.daggerVersion",
+//        androidProcessor \
+//            : "com.google.dagger:dagger-android-processor:" \
+//                + "$versions.daggerVersion",
+//        android \
+//            : "com.google.dagger:dagger-android:" \
+//                + "$versions.daggerVersion",
+//        base \
+//            : "com.google.dagger:dagger:" \
+//                + "$versions.daggerVersion"
+//    ],
+
+    daggerHilt : [
+        //        viewModel \
+        //            : "androidx.hilt:hilt-lifecycle-viewmodel:" \
+        //                + "$versions.daggerHiltVersion",
+        //        viewModelCompiler \
+        //            : "androidx.hilt:hilt-compiler:" \
+        //                + "$versions.daggerHiltVersion",
         compiler \
-            : "com.google.dagger:dagger-compiler:" \
-                + "$versions.daggerVersion",
-        androidProcessor \
-            : "com.google.dagger:dagger-android-processor:" \
-                + "$versions.daggerVersion",
-        android \
-            : "com.google.dagger:dagger-android:" \
-                + "$versions.daggerVersion",
+            : "com.google.dagger:hilt-compiler:" \
+                + "$versions.daggerHiltVersion",
         base \
-            : "com.google.dagger:dagger:" \
-                + "$versions.daggerVersion"
+            : "com.google.dagger:hilt-android:" \
+                + "$versions.daggerHiltVersion"
     ],
 
     // Add more Commons dependency library declarations here if necessary

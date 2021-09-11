@@ -6,6 +6,7 @@ buildscript {
         globalDependencyVersions = [
             gradleVersion : '7.1.0-alpha11', // Gradle Configuration
             kotlinVersion : '1.5.30',        // Kotlin Configuration
+            daggerHiltVersion : '2.38.1',    // Dagger Hilt Plugin
             gmsMatcher : '1.2.2',            // GMS Matcher Configuration
             seekVersions  : '0.39.0'         // Project Dependency Update Crawler Plugin
         ]
@@ -34,7 +35,8 @@ buildscript {
             + "$globalDependencyVersions.gmsMatcher"
         classpath "com.github.ben-manes:gradle-versions-plugin:" \
             + "$globalDependencyVersions.seekVersions"
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:" \
+            + "$globalDependencyVersions.daggerHiltVersion"
     }
 
 }

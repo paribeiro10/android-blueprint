@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id 'com.google.android.gms.strict-version-matcher-plugin'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply from: "$project.rootDir/features/static/onboarding/tools/dependencies/onboarding-versions.gradle"

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="blueprint.features.onboarding">
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="blueprint.features.onboarding"
+>
 
-    <!-- TODO: Add proper AppTheme later! -->
+    <application android:theme="@style/AppTheme.Base.NoActionBar">
+
+        <!--
+            SPLASH
+            TODO PR: Explain launchMode, etc ...
+         -->
+        <activity
+            android:name="blueprint.features.onboarding.functional.section.activities.splash.Splash"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Base.NoActionBar"
+            android:exported="true"
+        />
+
+        <!-- Add further Activities here ... -->
+
+    </application>
 
 </manifest>

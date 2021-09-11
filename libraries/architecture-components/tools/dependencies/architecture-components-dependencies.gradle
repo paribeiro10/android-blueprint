@@ -5,8 +5,8 @@ dependencies { configuration ->
 
     qualityAssuranceDependencies(libraries, configuration) /* Quality Assurance */
     kotlinDependencies(libraries, configuration)           /* Kotlin */
+    injectionDependencies(libraries, configuration)        /* Dependency Injection Frameworks */
     jetpackDependencies(libraries, configuration)          /* Android Jetpack */
-    injectionDependencies(libraries, configuration)        /* Dagger2 */
 
     // add more dependency groups here
 }
@@ -25,26 +25,26 @@ private static void qualityAssuranceDependencies(libraries, configuration) {
 
 /** Kotlin Dependencies Group. */
 private static void kotlinDependencies(libraries, configuration) {
-    configuration.api libraries.kotlin.base
+    configuration.implementation libraries.kotlin.base
 
     // add more Kotlin dependencies here if necessary
 }
 
 /** Android Jetpack Dependencies Group. */
 private static void jetpackDependencies(libraries, configuration) {
-    configuration.api libraries.androidJetpack.gridLayout
-    configuration.api libraries.androidJetpack.constraintLayout
-    configuration.api libraries.androidJetpack.lifecycleRuntime
-    configuration.api libraries.androidJetpack.multidex
-    configuration.api libraries.androidJetpack.viewModelKotlin
-    configuration.api libraries.androidJetpack.paging
-    configuration.api libraries.androidJetpack.recyclerViewSelection
-    configuration.api libraries.androidJetpack.lifecycle
-    configuration.api libraries.androidJetpack.liveData
-    configuration.api libraries.androidJetpack.cardView
-    configuration.api libraries.androidJetpack.design
-    configuration.api libraries.androidJetpack.recyclerView
-    configuration.api libraries.androidJetpack.viewModel
+//    configuration.api libraries.androidJetpack.gridLayout
+//    configuration.api libraries.androidJetpack.constraintLayout
+//    configuration.api libraries.androidJetpack.lifecycleRuntime
+//    configuration.api libraries.androidJetpack.multidex
+//    configuration.api libraries.androidJetpack.viewModelKotlin
+//    configuration.api libraries.androidJetpack.paging
+//    configuration.api libraries.androidJetpack.recyclerViewSelection
+//    configuration.api libraries.androidJetpack.lifecycle
+//    configuration.api libraries.androidJetpack.liveData
+//    configuration.api libraries.androidJetpack.cardView
+//    configuration.api libraries.androidJetpack.design
+//    configuration.api libraries.androidJetpack.recyclerView
+//    configuration.api libraries.androidJetpack.viewModel
     configuration.api libraries.androidJetpack.base
 
     configuration.kapt libraries.androidJetpack.lifecycleCompiler
@@ -54,12 +54,8 @@ private static void jetpackDependencies(libraries, configuration) {
 
 /** Dependency Injection Dependencies Group. */
 private static void injectionDependencies(libraries, configuration) {
-    configuration.api libraries.dagger.androidSupport
-    configuration.api libraries.dagger.android
-    configuration.api libraries.dagger.base
-
-    configuration.kapt libraries.dagger.compiler
-    configuration.kapt libraries.dagger.androidProcessor
+    configuration.implementation libraries.daggerHilt.base
+    configuration.kapt libraries.daggerHilt.compiler
 
     // add more dependencies here
 }

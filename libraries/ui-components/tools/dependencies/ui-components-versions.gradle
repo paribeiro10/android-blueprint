@@ -7,10 +7,15 @@ ext.versions = [
     jUnitAndroidXVersion  : '1.1.4-alpha01',
 
     /* Kotlin Frameworks */
-    kotlinVersion: '1.5.30',
+    kotlinVersion : '1.5.30',
 
     /* Dependency Injection Frameworks */
-    daggerVersion: '2.38.1',
+    daggerVersion : '2.38.1',
+
+    /* Material Design */
+    materialVersion     : '1.5.0-alpha02', // alpha03 breaks build
+    recyclerviewVersion : '1.2.1',
+    cardviewVersion     : '1.0.0',
 
     // add more dependency version here
 

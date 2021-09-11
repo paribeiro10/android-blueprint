@@ -1,5 +1,5 @@
 rootProject.name = "Blueprint"
 include ':mobile'
 include ':features:static:onboarding'
-include ':libraries:architecture-components'
 include ':libraries:ui-components'
+include ':libraries:architecture-components'

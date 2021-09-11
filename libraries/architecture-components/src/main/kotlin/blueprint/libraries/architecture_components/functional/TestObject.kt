@@ -1,4 +1,5 @@
 package blueprint.libraries.architecture_components.functional
 
-class TestObject {
-}
+data class TestObject(
+    val cenas: Int = 10
+)

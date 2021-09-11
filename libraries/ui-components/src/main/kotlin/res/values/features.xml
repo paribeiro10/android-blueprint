@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- Dynamic Module titles. -->
-    <string name="feature_home">Home</string>
-
-    <!-- Add more Dynamic Module title values in this file -->
-
-</resources>

@@ -4,12 +4,12 @@ dependencies { configuration ->
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     playCoreDependencies(libraries, configuration)  /* Google Play Core */
-    injectionDependencies(libraries, configuration) /* Dagger2 */
+    injectionDependencies(libraries, configuration) /* Dependency Injection Frameworks */
 
     /* In Project Static Multi-Modules */
     implementation project(':features:static:onboarding')
-    implementation project(':libraries:architecture-components')
     implementation project(':libraries:ui-components')
+    implementation project(':libraries:architecture-components')
 
     // add more dependency groups here
 }
@@ -23,8 +23,8 @@ private static void playCoreDependencies(libraries, configuration) {
 
 /** Dependency Injection Dependencies Group. */
 private static void injectionDependencies(libraries, configuration) {
-    configuration.kapt libraries.dagger.compiler
-    configuration.kapt libraries.dagger.androidProcessor
+    configuration.implementation libraries.daggerHilt.base
+    configuration.kapt libraries.daggerHilt.compiler
 
     // add more dependencies here
 }
