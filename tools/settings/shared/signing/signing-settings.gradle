@@ -30,6 +30,9 @@ android {
         }
 
     }
+//    else {
+//        throw new InvalidKeystorePropertiesException("Invalid Keystore Properties File: " + keystorePropertiesFile)
+//    }
 
     signingConfigs {
 

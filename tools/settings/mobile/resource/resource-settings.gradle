@@ -54,6 +54,8 @@ android {
             throw new InvalidResourcesPropertiesException(invalidResourcesPropertiesExceptionMessage)
         }
 
+    } else {
+        throw new InvalidResourcesPropertiesException("Invalid Resources Properties File: " + resourcesPropertiesFile)
     }
 
     sourceSets {
